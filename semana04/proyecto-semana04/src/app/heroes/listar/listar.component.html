@@ -1,1 +1,13 @@
-<p>listar works!</p>
+<h3>Listado de Héroes</h3>
+
+<button
+  (click) = "borrarUltimo()"
+  class="btn btn-outline-danger"
+>Borrar el ultimo Heroe</button>
+<ul class="mt-2 list-group">
+  <li
+  *ngFor="let hereo of heroes"
+  class="list-group-item">
+    {{ hereo }}
+  </li>
+</ul>

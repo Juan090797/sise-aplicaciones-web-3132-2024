@@ -1,26 +1,38 @@
 
-<h1>Batman</h1>
+<h1>{{ nombre }}</h1>
 
 <dl>
   <dt>Nombre:</dt>
-  <dd> nombre </dd>
+  <dd> {{ nombre }} </dd>
 
   <dt>Edad:</dt>
-  <dd> edad </dd>
+  <dd> {{ edad }} </dd>
 
 
   <dt>Metodo:</dt>
-  <dd> nombre </dd>
+  <dd> {{ getHeroeDescripcion() }} </dd>
 
   <dt>Capitalizado:</dt>
-  <dd> nombre Capitalizado </dd>
+  <dd> {{ capitalizarNombre }} </dd>
 
 </dl>
 
-<button class="btn btn-primary mx-2">
-  cambiar nombre
+<button
+*ngIf=" nombre == 'Superman' "
+(click) = "cambiarNombre()"
+class="btn btn-primary mx-2">
+  Cambiar nombre
 </button>
 
-<button class="btn btn-primary">
-  cambiar edad
+<button
+*ngIf=" edad == 100 "
+(click) = "cambiarEdad()"
+class="btn btn-primary">
+  Cambiar edad
+</button>
+
+<button
+(click) = "reset()"
+class="btn btn-success mx-2">
+  Reset
 </button>
