@@ -18,11 +18,13 @@
 </ng-template>
 
 
-
 <button
+  *ngIf="heroes.length > 0"
   (click) = "borrarUltimo()"
   class="btn btn-outline-danger"
->Borrar el ultimo Heroe</button>
+>Borrar el ultimo Heroe
+</button>
+
 <ul class="mt-2 list-group">
   <li
   *ngFor="let hereo of heroes"
