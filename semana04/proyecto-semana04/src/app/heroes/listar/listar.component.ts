@@ -25,8 +25,11 @@ export class ListarComponent {
   ['Spiderman', 'Iroman', 'Hulk', 'Superman',
     'Batman', 'Capitan America'];
 
+  public heroeEliminado? :string;
+
     borrarUltimo():void{
-      this.heroes.pop()
+      this.heroeEliminado = this.heroes.pop()
+      //console.log(this.heroeEliminado);
     }
 
 }

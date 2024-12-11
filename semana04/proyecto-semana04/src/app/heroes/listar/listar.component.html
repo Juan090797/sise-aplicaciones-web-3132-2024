@@ -1,5 +1,24 @@
 <h3>Listado de Héroes</h3>
 
+<!-- <div *ngIf="heroeEliminado">
+  <h3>Héreo borrado <small class="text-danger"> {{heroeEliminado}} </small></h3>
+</div>
+
+<div *ngIf="!heroeEliminado">
+  <h3>No ha borrado nada</h3>
+</div> -->
+
+
+<div *ngIf="heroeEliminado; else nosehaborradoHeroe">
+  <h3>Héreo borrado <small class="text-danger"> {{heroeEliminado}} </small></h3>
+</div>
+
+<ng-template #nosehaborradoHeroe>
+  <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+
 <button
   (click) = "borrarUltimo()"
   class="btn btn-outline-danger"
