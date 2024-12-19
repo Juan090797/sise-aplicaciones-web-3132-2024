@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ListarComponent {
 
-
   @Input()
   public personajeLista: Personaje[] = [
     {

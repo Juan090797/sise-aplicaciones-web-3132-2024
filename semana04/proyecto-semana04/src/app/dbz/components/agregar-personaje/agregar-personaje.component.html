@@ -1,8 +1,17 @@
+
+<!-- ngModel -->
+<!--
+() => indicamos que es un evento
+ [] => indicamos que estamos asociando un atributo
+ -->
 <h4>Agregar personaje</h4>
-    <form class="row">
-      <input type="text" class="form-control mb-2" placeholder="Nombre">
-      <input type="number" class="form-control mb-2" placeholder="Poder">
-      <button type="submit" class="btn btn-primary">
-        Agregar
-      </button>
-    </form>
+<form class="row" (ngSubmit)="agregarPersonaje()">
+  <input type="text" [(ngModel)]="personsaje.nombre" name="nombre" class="form-control mb-2" placeholder="Nombre">
+  <input type="number" [(ngModel)]="personsaje.poder" name="poder" class="form-control mb-2" placeholder="Poder">
+  <button type="submit" class="btn btn-primary">
+    Agregar
+  </button>
+
+  <pre>{{ personsaje | json }}</pre>
+
+</form>
