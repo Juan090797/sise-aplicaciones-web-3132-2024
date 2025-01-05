@@ -38,5 +38,10 @@ export class MainPageComponent {
     },
   ];
 
+  onNewPersonaje(personaje: Personaje):void{
+    console.log('Pagina Main');
+    console.log(personaje);
+  }
+
 
 }

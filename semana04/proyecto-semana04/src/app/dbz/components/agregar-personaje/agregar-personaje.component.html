@@ -1,9 +1,8 @@
-
 <!-- ngModel -->
 <!--
-() => indicamos que es un evento
- [] => indicamos que estamos asociando un atributo
- -->
+  () => indicamos que es un evento
+  [] => indicamos que estamos asociando un atributo
+-->
 <h4>Agregar personaje</h4>
 <form class="row" (ngSubmit)="agregarPersonaje()">
   <input type="text" [(ngModel)]="personsaje.nombre" name="nombre" class="form-control mb-2" placeholder="Nombre">
