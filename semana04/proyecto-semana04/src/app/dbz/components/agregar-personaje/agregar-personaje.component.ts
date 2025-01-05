@@ -22,16 +22,22 @@ export class AgregarPersonajeComponent {
 
 
   agregarPersonaje(): void {
+    //debugger; sirve para debugear el codigo
     if (this.personsaje.nombre.length === 0) return;
     console.log(this.personsaje);
     this.onNewPersonaje.emit(this.personsaje)
-    this.limpiarCampos();
+
+    this.personsaje = {
+      nombre: '',
+      poder: 0}
+
+    //this.limpiarCampos();
   }
 
-  limpiarCampos() {
-    this.personsaje.nombre = '';
-    this.personsaje.poder = 0;
-  }
+  // limpiarCampos() {
+  //   this.personsaje.nombre = '';
+  //   this.personsaje.poder = 0;
+  // }
 
 
 }
