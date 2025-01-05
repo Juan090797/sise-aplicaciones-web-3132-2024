@@ -20,12 +20,13 @@ export class ListarComponent {
   ]
 
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
 
-  onEliminarPersonaje(posicion:number):void{
+  onEliminarPersonaje(id?: string):void{
     //console.log('posicion del personaje: ' +  posicion);
-    this.onDelete.emit(posicion);
+    if(!id) return;
+    this.onDelete.emit(id);
   }
 
   //TAREA 01 - 2 PUNTOS ADICIONALES MAS (10 minutos) 11:05
