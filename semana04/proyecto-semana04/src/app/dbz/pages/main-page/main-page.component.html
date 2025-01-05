@@ -16,11 +16,11 @@
   -->
 
   <div class="col-12 col-md-6">
-    <app-dbz-listar [personajeLista]="personajes"></app-dbz-listar>
+    <app-dbz-listar [personajeLista]="dbzService.personajes" (onDelete)="dbzService.onDeletePersonsaje($event)"></app-dbz-listar>
   </div>
 
   <div class="col-12 col-md-6">
-    <app-agregar-dbz-personaje (onNewPersonaje)="onNewPersonaje($event)"></app-agregar-dbz-personaje>
+    <app-agregar-dbz-personaje (onNewPersonaje)="dbzService.onNewPersonaje($event)"></app-agregar-dbz-personaje>
   </div>
 
 </div>

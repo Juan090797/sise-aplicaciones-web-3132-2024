@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Personaje } from '../../interfaces/personaje.interface';
 import { CommonModule } from '@angular/common';
 
@@ -18,5 +18,16 @@ export class ListarComponent {
       poder: 250
     }
   ]
+
+  @Output()
+  public onDelete: EventEmitter<number> = new EventEmitter();
+
+
+  onEliminarPersonaje(posicion:number):void{
+    //console.log('posicion del personaje: ' +  posicion);
+    this.onDelete.emit(posicion);
+  }
+
+  //TAREA 01 - 2 PUNTOS ADICIONALES MAS (10 minutos) 11:05
 
 }

@@ -7,20 +7,22 @@
     let posicion = index;
     let primerPersonaje = first;
     let ultimoPersonaje = last;
-
-    "
-  class="list-group">
-  <li class="list-group-item list-group-item-"
-      [ngClass]="{
+    " class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center" [ngClass]="{
         'list-group-item-success' : primerPersonaje,
         'list-group-item-secondary' : ultimoPersonaje
-      }"
-  >
-    <span class="text-primary">{{ posicion }}.</span>
-    <span>{{ personaje.nombre }} - </span>
-    <strong>Poder: </strong>
-    <span>{{ personaje.poder }}</span>
-    <span>Es el primero: {{primerPersonaje}} </span>
-    <span>Es el ultimo: {{ultimoPersonaje}} </span>
+      }">
+    <div>
+      <span class="text-primary">{{ posicion +1 }}.</span>
+      <span>{{ personaje.nombre }} - </span>
+      <strong>Poder: </strong>
+      <span>{{ personaje.poder }}</span>
+      <!-- <span>Es el primero: {{primerPersonaje}} </span>
+      <span>Es el ultimo: {{ultimoPersonaje}} </span> -->
+    </div>
+
+    <button (click)="onEliminarPersonaje(posicion)" class="btn btn-danger">
+      X
+    </button>
   </li>
 </ul>
